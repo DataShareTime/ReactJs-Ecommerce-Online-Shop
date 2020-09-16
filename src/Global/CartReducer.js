@@ -1,4 +1,4 @@
-//useReducer Function receives two arguments, First initial State, second action
+//cartReducer Function receives two arguments, First initial State, & Second Action
 
 export const CartReducer = (state, action) => {
     const { shoppingCart, totalPrice, qty } = state;
@@ -24,9 +24,6 @@ export const CartReducer = (state, action) => {
             }
                 break;
 
-
-
-
         case 'INC':
             product = action.cart;
             product.qty = product.qty + 1;
@@ -36,8 +33,6 @@ export const CartReducer = (state, action) => {
             shoppingCart[index] = product;
             return { shoppingCart: [...shoppingCart], totalPrice: updatedPrice, qty: updatedQty }
             break;
-
-
 
         case 'DEC':
             product = action.cart;
@@ -74,4 +69,3 @@ export const CartReducer = (state, action) => {
 
     }
 }
-

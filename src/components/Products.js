@@ -5,6 +5,7 @@ import { ProductsContext } from "../Global/ProductContext";
 
 const Products = () => {
     const { products } = useContext(ProductsContext);
+    //accessing dispatch function
     const { dispatch } = useContext(CartContext)
 
     return (
@@ -26,9 +27,11 @@ const Products = () => {
                             </div>
                         </div>
 
-
+                        {/* onClick function calls to dispacsh function,  & dispatch will call to Reducer Function
+                         Through dispatch function we will send (Type,product-Id, complete Product)
+                         */}
                         <div className="add-to-cart" onClick={() => dispatch({ type: 'ADD_TO_CART', id: product.id, product: product })}>
-                            add to cart
+                            Add to cart
                     </div>
                         {product.status === 'hot' ? <div className="hot">Hot</div> : ''}
                         {product.status === 'new' ? <div className="new">New</div> : ''}

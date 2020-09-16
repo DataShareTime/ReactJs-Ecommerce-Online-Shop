@@ -8,7 +8,7 @@ import Products from './components/Products';
 import Cart from './components/Cart';
 import NotFound from './components/NotFound';
 
-function App() {
+function App() { 
   return (
     <div>
       <ProductContextProvider>

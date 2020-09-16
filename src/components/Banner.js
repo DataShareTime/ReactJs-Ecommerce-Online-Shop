@@ -1,4 +1,3 @@
-//Online Shop
 import React from 'react'
 
 const  Banner = () =>{
